@@ -4,13 +4,8 @@ export const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background: conic-gradient(
-    from 0deg at 50% 130.83%,
-    #f8f8f8 0deg,
-    #d0d0d0 28.98deg,
-    #cccccc 180deg,
-    #d0d0d0 333.13deg,
-    #f8f8f8 360deg
-  );
-  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background: conic-gradient(at 50% 130.83%, #f8f8f8, #a1a1a1 15%, #595959, #a1a1a1 85%, #f8f8f8);
+  z-index: -10;
 `;
