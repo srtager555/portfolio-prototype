@@ -28,4 +28,8 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const ProjectName = styled.p``;
+export const ProjectName = styled.p`
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+`;
