@@ -13,7 +13,8 @@ export const FlexContainer = styled.div`
 
 export const ProjectCard = styled.div`
   margin: 0 auto;
-  width: 15vw;
+  width: 350px;
+  border-radius: 10px;
   overflow: hidden;
 `;
 
@@ -30,6 +31,8 @@ export const ImageContainer = styled.div`
 
 export const ProjectName = styled.p`
   text-align: center;
+  font-size: 1.5rem;
   padding: 10px;
   background-color: #fff;
+  margin-top: -5px;
 `;
