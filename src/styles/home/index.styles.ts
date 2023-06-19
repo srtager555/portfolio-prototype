@@ -6,7 +6,6 @@ export const BGTitle = styled.div<{ loaded: boolean }>`
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  font-family: "Montserrat";
   font-size: 15rem;
   white-space: nowrap;
   text-transform: uppercase;
@@ -14,6 +13,7 @@ export const BGTitle = styled.div<{ loaded: boolean }>`
   overflow: hidden;
 
   & span {
+    font-family: "Montserrat";
     display: inline-block;
     transition: transform 250ms ease-in-out, top 250ms ease-in-out;
   }
