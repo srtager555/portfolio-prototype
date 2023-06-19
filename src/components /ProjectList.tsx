@@ -23,7 +23,7 @@ export function ProjectList() {
           <ImageContainer>
             <img src="https://i.ibb.co/b56T388/Orianna-full-body.jpg" />
           </ImageContainer>
-          <ProjectName>Wrapping letters</ProjectName>
+          <ProjectName>Barbershop app</ProjectName>
         </TranslateContainer>
       </ProjectCard>
       <ProjectCard>
@@ -39,7 +39,7 @@ export function ProjectList() {
           <ImageContainer>
             <img src="https://i.ibb.co/b56T388/Orianna-full-body.jpg" />
           </ImageContainer>
-          <ProjectName>Wrapping letters</ProjectName>
+          <ProjectName>Portafolio 2022</ProjectName>
         </TranslateContainer>
       </ProjectCard>
 
