@@ -1,4 +1,10 @@
-import { FlexContainer, ImageContainer, ProjectCard, TranslateContainer } from "@/styles/home/projectList.styles";
+import {
+  FlexContainer,
+  ImageContainer,
+  ProjectCard,
+  ProjectName,
+  TranslateContainer,
+} from "@/styles/home/projectList.styles";
 import { useEffect, useState } from "react";
 
 export function ProjectList() {
@@ -17,7 +23,7 @@ export function ProjectList() {
           <ImageContainer>
             <img src="https://i.ibb.co/b56T388/Orianna-full-body.jpg" />
           </ImageContainer>
-          Wrapping letters
+          <ProjectName>Wrapping letters</ProjectName>
         </TranslateContainer>
       </ProjectCard>
       <ProjectCard>
@@ -25,7 +31,7 @@ export function ProjectList() {
           <ImageContainer>
             <img src="https://i.ibb.co/b56T388/Orianna-full-body.jpg" />
           </ImageContainer>
-          Wrapping letters
+          <ProjectName>Wrapping letters</ProjectName>
         </TranslateContainer>
       </ProjectCard>
       <ProjectCard>
@@ -33,9 +39,10 @@ export function ProjectList() {
           <ImageContainer>
             <img src="https://i.ibb.co/b56T388/Orianna-full-body.jpg" />
           </ImageContainer>
-          Wrapping letters
+          <ProjectName>Wrapping letters</ProjectName>
         </TranslateContainer>
       </ProjectCard>
+
       <div>
         <span></span>
       </div>
