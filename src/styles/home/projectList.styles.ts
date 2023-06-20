@@ -24,7 +24,7 @@ export const ProjectCard = styled.div`
   border-radius: 10px;
   overflow: hidden;
 
-  @media (max-width: 1124px) {
+  @media (min-width: 900px) and (max-width: 1124px) {
     margin: 0 2%;
   }
   @media (max-width: 900px) {
