@@ -9,21 +9,25 @@ export const FlexContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  max-width: 1920px;
   overflow: scroll;
 
-  @media (min-width: 414px) {
+  @media (max-width: 900px) {
     padding: 0 10%;
   }
 `;
 
 export const ProjectCard = styled.div`
   margin: 0 auto;
-  min-width: 275px;
+  min-width: 250px;
   max-width: 350px;
   border-radius: 10px;
   overflow: hidden;
 
-  @media (min-width: 414px) {
+  @media (max-width: 1124px) {
+    margin: 0 2%;
+  }
+  @media (max-width: 900px) {
     margin-right: 70px;
   }
 `;
