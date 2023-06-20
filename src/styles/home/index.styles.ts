@@ -16,6 +16,10 @@ export const BGTitle = styled.div<{ loaded: boolean }>`
   pointer-events: none;
   transition: top 500ms ease-in-out;
 
+  @media (max-width: 600px) {
+    white-space: normal;
+  }
+
   & span {
     font-family: "League Gothic";
     display: inline-block;
