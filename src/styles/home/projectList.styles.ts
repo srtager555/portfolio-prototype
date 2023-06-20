@@ -6,16 +6,26 @@ export const FlexContainer = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
+  overflow: scroll;
+
+  @media (min-width: 414px) {
+    padding: 0 10%;
+  }
 `;
 
 export const ProjectCard = styled.div`
   margin: 0 auto;
-  width: 350px;
+  min-width: 275px;
+  max-width: 350px;
   border-radius: 10px;
   overflow: hidden;
+
+  @media (min-width: 414px) {
+    margin-right: 70px;
+  }
 `;
 
 export const TranslateContainer = styled.div<{ loaded: boolean }>`
