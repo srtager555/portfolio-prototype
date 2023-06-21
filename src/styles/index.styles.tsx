@@ -20,5 +20,20 @@ export const Filter = styled.div`
   background-repeat: repeat;
   z-index: 999;
   pointer-events: none;
-  opacity: 0.02;
+  opacity: 0.1;
+  animation: filter 1s infinite;
+
+  @keyframes filter {
+    0%,
+    50% {
+      background-position: 10% 50%;
+    }
+    25%,
+    75% {
+      background-position: 56% 23%;
+    }
+    100% {
+      background-position: 99% 01%;
+    }
+  }
 `;
