@@ -3,25 +3,44 @@ import { useEffect, useState } from "react";
 import { ProjectList } from "@/components /ProjectList";
 import { GetStaticProps, NextPage } from "next";
 
-export const getStaticProps: GetStaticProps = async (ctx) => {
-  // provitional api
-  const projects: CardData[] = await fetch("http://localhost:3000/api/project_list", {
-    // ...
-  }).then((data) => data.json());
+// gsp removed for a issue time
+// export const getStaticProps: GetStaticProps = async (ctx) => {
+//   // provitional api
+//   const projects: CardData[] = await fetch("http://localhost:3000/api/project_list", {
+//     // ...
+//   }).then((data) => data.json());
 
-  return {
-    props: {
-      CardData: projects,
-    },
-  };
-};
+//   return {
+//     props: {
+//       CardData: projects,
+//     },
+//   };
+// };
 
-const Home: NextPage<{ CardData: CardData[] }> = function ({ CardData }) {
+const Home: NextPage = function () {
   const [loaded, setLoaded] = useState(false);
   const [mobile, setMobile] = useState(true);
+  const [cardData, setCardData] = useState<CardData[]>([
+    {
+      id: "failed",
+      name: "failed",
+      project_url: "/404",
+      project_face:
+        "https://i.ibb.co/K7KxrMp/snow-moon-ahri-skin-lol-splash-art-phone-wallpaper-hd-uhdpaper-com-593-1-k.jpg",
+    },
+  ]);
 
   useEffect(() => {
     setTimeout(() => setLoaded(true), 1500);
+  }, []);
+
+  useEffect(() => {
+    async function fetchProjects() {
+      const projects: CardData[] = await fetch("/api/project_list").then((data) => data.json());
+
+      setCardData(projects);
+    }
+    fetchProjects();
   }, []);
 
   useEffect(() => {
@@ -59,7 +78,7 @@ const Home: NextPage<{ CardData: CardData[] }> = function ({ CardData }) {
           </TextAnimation>
         </BGTitleMobile>
       )}
-      <ProjectList CardData={CardData} />
+      <ProjectList CardData={cardData} />
     </>
   );
 };
