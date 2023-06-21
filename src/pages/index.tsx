@@ -4,7 +4,7 @@ import { ProjectList } from "@/components /ProjectList";
 import { GetStaticProps, NextPage } from "next";
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const projects: CardData = await fetch("/api/project_list", {
+  const projects: CardData[] = await fetch("http://localhost:3000/api/project_list", {
     // ...
   }).then((data) => data.json());
 
@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   };
 };
 
-const Home: NextPage<{ CardData: CardData }> = function ({ CardData }) {
+const Home: NextPage<{ CardData: CardData[] }> = function ({ CardData }) {
   const [loaded, setLoaded] = useState(false);
   const [mobile, setMobile] = useState(true);
 

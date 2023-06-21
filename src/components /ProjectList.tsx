@@ -10,11 +10,7 @@ import {
 import { useEffect, useState } from "react";
 
 interface props {
-  CardData: {
-    project_url: URL;
-    project_face: string;
-    name: string;
-  }[];
+  CardData: CardData[];
 }
 
 export function ProjectList({ CardData }: props) {
