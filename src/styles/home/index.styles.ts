@@ -65,6 +65,10 @@ export const TextAnimation = styled.div<{ loaded: boolean; reverse?: boolean; ab
         else return loaded ? "-100%" : "0%";
       }}
     );
-    transition: transform 500ms ease-in-out;
+    transition: ${({ loaded, reverse }) => {
+      if (loaded && reverse) return "transform 500ms ease-in-out";
+      else if (reverse) return "none";
+      else return "transform 500ms ease-in-out";
+    }};
   }
 `;
