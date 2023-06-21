@@ -26,6 +26,8 @@ export const ProjectCard = styled(Link)`
   border-radius: 10px;
   overflow: hidden;
   transition: 200ms ease;
+  color: #000;
+  text-decoration: none;
 
   &:hover {
     box-shadow: 0 0 15px #0005;
