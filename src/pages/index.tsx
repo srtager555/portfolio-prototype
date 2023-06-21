@@ -1,21 +1,21 @@
 import { BGTitleDesktop, BGTitleMobile, TextAnimation } from "@/styles/home/index.styles";
 import { useEffect, useState } from "react";
 import { ProjectList } from "@/components /ProjectList";
-import { GetStaticProps } from "next";
+import { GetStaticProps, NextPage } from "next";
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const projects = await fetch("/api/project_list", {
+  const projects: CardData = await fetch("/api/project_list", {
     // ...
-  });
+  }).then((data) => data.json());
 
   return {
     props: {
-      projects,
+      CardData: projects,
     },
   };
 };
 
-export default function Home() {
+const Home: NextPage<{ CardData: CardData }> = function ({ CardData }) {
   const [loaded, setLoaded] = useState(false);
   const [mobile, setMobile] = useState(true);
 
@@ -58,7 +58,7 @@ export default function Home() {
           </TextAnimation>
         </BGTitleMobile>
       )}
-      <ProjectList />
+      <ProjectList CardData={CardData} />
     </>
   );
-}
+};
