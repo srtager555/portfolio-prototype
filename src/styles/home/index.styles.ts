@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BGTitle = styled.div<{ loaded: boolean }>`
+export const BGTitleDesktop = styled.div<{ loaded: boolean }>`
   position: fixed;
   top: ${({ loaded }) => (loaded ? "25%" : "50%")};
   left: 50%;
@@ -35,5 +35,28 @@ export const BGTitle = styled.div<{ loaded: boolean }>`
     top: ${({ loaded }) => (loaded ? "0%" : "100%")};
     left: 50%;
     transform: translateX(-50%);
+  }
+`;
+
+export const BGTitleMobile = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+`;
+
+export const TextAnimation = styled.div<{ loaded: boolean; reverse?: boolean }>`
+  overflow: hidden;
+
+  & span {
+    font-size: 4rem;
+    display: inline-block;
+    transform: translateY(
+      ${({ loaded, reverse }) => {
+        if (reverse) return loaded ? "0%" : "100%";
+        else return loaded ? "100%" : "0%";
+      }}
+    );
+    transition: transform 500ms ease-in-out;
   }
 `;
