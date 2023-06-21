@@ -30,7 +30,7 @@ export const ProjectCard = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    box-shadow: 0 0 15px #0005;
+    filter: drop-shadow(0px 0px 15px #0005);
   }
 
   @media (max-width: 1280px) {
