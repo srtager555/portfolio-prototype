@@ -45,16 +45,22 @@ export const BGTitleMobile = styled.div`
   width: 100%;
 `;
 
-export const TextAnimation = styled.div<{ loaded: boolean; reverse?: boolean }>`
+export const TextAnimation = styled.div<{ loaded: boolean; reverse?: boolean; absolute?: boolean }>`
+  ${({ absolute }) => `
+    position: absolute;
+    top: 0;
+    left: 0;
+  `}
   overflow: hidden;
 
   & span {
-    font-size: 4rem;
+    font-family: "League Gothic";
+    font-size: 10rem;
     display: inline-block;
     transform: translateY(
       ${({ loaded, reverse }) => {
         if (reverse) return loaded ? "0%" : "100%";
-        else return loaded ? "100%" : "0%";
+        else return loaded ? "-100%" : "0%";
       }}
     );
     transition: transform 500ms ease-in-out;
