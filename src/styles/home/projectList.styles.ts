@@ -19,7 +19,7 @@ export const FlexContainer = styled.div`
 
 export const ProjectCard = styled.div`
   margin: 0 auto;
-  min-width: 250px;
+  min-width: 225px;
   max-width: 350px;
   border-radius: 10px;
   overflow: hidden;
