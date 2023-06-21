@@ -46,7 +46,9 @@ export const BGTitleMobile = styled.div`
 `;
 
 export const TextAnimation = styled.div<{ loaded: boolean; reverse?: boolean; absolute?: boolean }>`
-  ${({ absolute }) => `
+  ${({ absolute }) =>
+    absolute &&
+    `
     position: absolute;
     top: 0;
     left: 0;
