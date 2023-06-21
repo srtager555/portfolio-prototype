@@ -1,6 +1,19 @@
 import { BGTitleDesktop, BGTitleMobile, TextAnimation } from "@/styles/home/index.styles";
 import { useEffect, useState } from "react";
 import { ProjectList } from "@/components /ProjectList";
+import { GetStaticProps } from "next";
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const projects = await fetch("/api/project_list", {
+    // ...
+  });
+
+  return {
+    props: {
+      projects,
+    },
+  };
+};
 
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
