@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 export const FlexContainer = styled.div`
   position: fixed;
@@ -10,6 +11,7 @@ export const FlexContainer = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1920px;
+  padding: 20px;
   overflow: scroll;
 
   @media (max-width: 900px) {
@@ -17,12 +19,17 @@ export const FlexContainer = styled.div`
   }
 `;
 
-export const ProjectCard = styled.div`
+export const ProjectCard = styled(Link)`
   margin: 0 auto;
   min-width: 225px;
   max-width: 350px;
   border-radius: 10px;
   overflow: hidden;
+  transition: 200ms ease;
+
+  &:hover {
+    box-shadow: 0 0 15px #0005;
+  }
 
   @media (max-width: 1280px) {
     max-width: 325px;
