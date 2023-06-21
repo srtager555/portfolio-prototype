@@ -16,6 +16,11 @@ export const BGTitleDesktop = styled.div<{ loaded: boolean }>`
   pointer-events: none;
   transition: top 500ms ease-in-out;
 
+  @media (max-width: 1444px) {
+    top: ${({ loaded }) => (loaded ? "20%" : "50%")};
+    font-size: 20rem;
+  }
+
   @media (max-width: 600px) {
     white-space: normal;
   }
@@ -44,6 +49,7 @@ export const BGTitleMobile = styled.div`
   left: 0;
   width: 100%;
   padding: 0 10%;
+  mix-blend-mode: exclusion;
 `;
 
 export const TextAnimation = styled.div<{ loaded: boolean; reverse?: boolean; absolute?: boolean }>`
@@ -57,6 +63,7 @@ export const TextAnimation = styled.div<{ loaded: boolean; reverse?: boolean; ab
   overflow: hidden;
 
   & span {
+    color: #fff;
     font-family: "League Gothic";
     font-size: 10rem;
     display: inline-block;
