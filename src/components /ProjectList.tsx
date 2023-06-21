@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import {
   FlexContainer,
   ImageContainer,
@@ -7,7 +9,15 @@ import {
 } from "@/styles/home/projectList.styles";
 import { useEffect, useState } from "react";
 
-export function ProjectList() {
+interface props {
+  CardData: {
+    project_url: URL;
+    project_face: string;
+    name: string;
+  }[];
+}
+
+export function ProjectList({ CardData }: props) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -18,34 +28,16 @@ export function ProjectList() {
 
   return (
     <FlexContainer>
-      <ProjectCard>
-        <TranslateContainer loaded={loaded}>
-          <ImageContainer>
-            <img src="https://i.ibb.co/b56T388/Orianna-full-body.jpg" />
-          </ImageContainer>
-          <ProjectName>Barbershop app</ProjectName>
-        </TranslateContainer>
-      </ProjectCard>
-      <ProjectCard>
-        <TranslateContainer loaded={loaded}>
-          <ImageContainer>
-            <img src="https://i.ibb.co/b56T388/Orianna-full-body.jpg" />
-          </ImageContainer>
-          <ProjectName>Wrapping letters</ProjectName>
-        </TranslateContainer>
-      </ProjectCard>
-      <ProjectCard>
-        <TranslateContainer loaded={loaded}>
-          <ImageContainer>
-            <img src="https://i.ibb.co/b56T388/Orianna-full-body.jpg" />
-          </ImageContainer>
-          <ProjectName>Portafolio 2022</ProjectName>
-        </TranslateContainer>
-      </ProjectCard>
-
-      <div>
-        <span></span>
-      </div>
+      {CardData.map(({ project_face, project_url, name }, index) => (
+        <ProjectCard href={project_url} key={`${index} - ${name}`}>
+          <TranslateContainer loaded={loaded}>
+            <ImageContainer>
+              <img src={project_face} alt={name} />
+            </ImageContainer>
+            <ProjectName>Barbershop app</ProjectName>
+          </TranslateContainer>
+        </ProjectCard>
+      ))}
     </FlexContainer>
   );
 }
