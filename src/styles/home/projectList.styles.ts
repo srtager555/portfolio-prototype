@@ -51,6 +51,10 @@ export const ProjectCard = styled(Link)`
     &:hover {
       filter: none;
     }
+
+    &:nth-child(3) {
+      margin-right: 10%;
+    }
   }
 
   @media (max-width: 414px) {
