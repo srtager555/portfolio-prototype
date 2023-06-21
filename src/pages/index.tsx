@@ -25,6 +25,9 @@ export default function Home() {
         </BGTitleDesktop>
       ) : (
         <BGTitleMobile>
+          <TextAnimation loaded={loaded} reverse absolute>
+            <span>Portfolio</span>
+          </TextAnimation>
           <TextAnimation loaded={loaded}>
             <span>Carlos</span>
           </TextAnimation>
