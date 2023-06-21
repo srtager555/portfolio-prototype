@@ -78,5 +78,9 @@ export const TextAnimation = styled.div<{ loaded: boolean; reverse?: boolean; ab
       else if (reverse) return "none";
       else return "transform 500ms ease-in-out";
     }};
+
+    @media (max-width: 414px) {
+      font-size: 8rem;
+    }
   }
 `;
