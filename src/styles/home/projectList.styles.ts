@@ -35,6 +35,10 @@ export const ProjectCard = styled.div`
   @media (max-width: 900px) {
     margin-right: 70px;
   }
+
+  @media (max-width: 414px) {
+    min-width: 200px;
+  }
 `;
 
 export const TranslateContainer = styled.div<{ loaded: boolean }>`
@@ -54,4 +58,8 @@ export const ProjectName = styled.p`
   padding: 10px;
   background-color: #fff;
   margin-top: -5px;
+
+  @media (max-width: 414px) {
+    font-size: 1.2rem;
+  }
 `;
