@@ -30,7 +30,7 @@ export function ProjectList({ CardData }: props) {
             <ImageContainer>
               <img src={project_face} alt={name} />
             </ImageContainer>
-            <ProjectName>Barbershop app</ProjectName>
+            <ProjectName>{name}</ProjectName>
           </TranslateContainer>
         </ProjectCard>
       ))}
