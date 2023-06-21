@@ -1,4 +1,3 @@
-import { isMobile } from "react-device-detect";
 import { BGTitleDesktop, BGTitleMobile, TextAnimation } from "@/styles/home/index.styles";
 import { useEffect, useState } from "react";
 import { ProjectList } from "@/components /ProjectList";
@@ -12,8 +11,18 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    if (!isMobile) setMobile(false);
-    else setMobile(true);
+    function Resize() {
+      if (window.innerWidth >= 1024) setMobile(false);
+      else setMobile(true);
+    }
+
+    Resize();
+
+    window.addEventListener("resize", Resize);
+
+    return () => {
+      window.removeEventListener("resize", Resize);
+    };
   }, []);
 
   return (
