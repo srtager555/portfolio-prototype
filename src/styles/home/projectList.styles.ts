@@ -33,6 +33,10 @@ export const ProjectCard = styled(Link)`
     filter: drop-shadow(0px 0px 15px #0005);
   }
 
+  &:active {
+    transform: scale(0.9);
+  }
+
   @media (max-width: 1280px) {
     max-width: 325px;
   }
@@ -43,6 +47,10 @@ export const ProjectCard = styled(Link)`
 
   @media (max-width: 900px) {
     margin-right: 70px;
+
+    &:hover {
+      filter: none;
+    }
   }
 
   @media (max-width: 414px) {
