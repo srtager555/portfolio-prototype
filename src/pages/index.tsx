@@ -62,3 +62,5 @@ const Home: NextPage<{ CardData: CardData }> = function ({ CardData }) {
     </>
   );
 };
+
+export default Home;
