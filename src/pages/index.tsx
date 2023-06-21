@@ -4,6 +4,7 @@ import { ProjectList } from "@/components /ProjectList";
 import { GetStaticProps, NextPage } from "next";
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
+  // provitional api
   const projects: CardData[] = await fetch("http://localhost:3000/api/project_list", {
     // ...
   }).then((data) => data.json());
