@@ -15,7 +15,9 @@ export const FlexContainer = styled.div`
   overflow: scroll;
 
   @media (max-width: 900px) {
-    padding: 0 10%;
+    width: 80%;
+    padding: 0;
+    border-radius: 10px;
   }
 `;
 
@@ -50,10 +52,6 @@ export const ProjectCard = styled(Link)`
 
     &:hover {
       filter: none;
-    }
-
-    &:nth-child(3) {
-      margin-right: 10%;
     }
   }
 
