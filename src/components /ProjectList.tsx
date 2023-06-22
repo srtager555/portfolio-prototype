@@ -11,17 +11,10 @@ import { useEffect, useState } from "react";
 
 interface props {
   CardData: CardData[];
+  loaded: boolean;
 }
 
-export function ProjectList({ CardData }: props) {
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 1600);
-  }, []);
-
+export function ProjectList({ CardData, loaded }: props) {
   return (
     <FlexContainer>
       {CardData.map(({ project_face, project_url, name }, index) => (
