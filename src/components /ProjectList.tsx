@@ -27,7 +27,6 @@ export function ProjectList({ CardData, loaded }: props) {
           </TranslateContainer>
         </ProjectCard>
       ))}
-      <span style={{ opacity: 0 }}>a</span>
     </FlexContainer>
   );
 }
