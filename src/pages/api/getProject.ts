@@ -12,7 +12,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const project = findProject({ id: id_project as any });
 
     if (!project) {
-      res.status(404);
+      res.status(404).json({ notFound: "not found" });
     } else {
       res.status(200).json(project);
     }
