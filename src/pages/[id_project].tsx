@@ -15,12 +15,12 @@ export default function Project() {
         body: JSON.stringify({
           id_project,
         }),
-      }).then((data) => data.json());
+      }).then((data) => {
+        if (data.ok) return data.json();
+        else if (data.status === 404) setNotFound(true);
+      });
 
-      if (!project || typeof project === "string") {
-        setNotFound(true);
-        return;
-      }
+      if (!project) return;
 
       setData(project);
     }
@@ -28,9 +28,9 @@ export default function Project() {
     getProject();
   }, [id_project]);
 
-  if (!data) <>loading</>;
+  if (notFound && !data) return <>404</>;
 
-  if (notFound) <>404</>;
+  if (!data) return <>loading</>;
 
   return <>a</>;
 }
