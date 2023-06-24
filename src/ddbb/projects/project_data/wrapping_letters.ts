@@ -16,3 +16,5 @@ const wrapping_letters: ProjectData = {
     "https://i.ibb.co/yPzfbjX/FYu-CVc-UVUAA94lm.jpg",
   ],
 };
+
+export default wrapping_letters;
