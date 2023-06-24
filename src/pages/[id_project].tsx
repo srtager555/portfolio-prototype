@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function Project() {
   const { id_project } = useRouter().query;
   const [data, setData] = useState<ProjectData>();
-  const [notFound, setNotFound] = useState<ProjectData>();
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     async function getProject() {
@@ -17,7 +17,10 @@ export default function Project() {
         }),
       }).then((data) => data.json());
 
-      if (!project) return;
+      if (!project || typeof project === "string") {
+        setNotFound(true);
+        return;
+      }
 
       setData(project);
     }
