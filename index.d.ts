@@ -6,3 +6,11 @@ type CardData = {
   project_face: string;
   name: string;
 };
+
+type ProjectData = {
+  image: string;
+  title: string;
+  desc: string;
+  content: string;
+  galery: string[];
+};
