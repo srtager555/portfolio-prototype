@@ -21,6 +21,8 @@ export default function Project() {
 
       setData(project);
     }
+
+    getProject();
   }, [id_project]);
 
   if (!data) <>loading</>;
