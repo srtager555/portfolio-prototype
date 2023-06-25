@@ -37,7 +37,7 @@ export default function Project() {
   return (
     <>
       <Helmet title={data.title} image={data.image}>
-        <Header title={data.title} image={data.image} />
+        <Header title={data.title} image={data.image} description={data.desc} />
       </Helmet>
     </>
   );
