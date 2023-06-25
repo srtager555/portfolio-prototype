@@ -1,4 +1,5 @@
 import { Header } from "@/components /projects/Header";
+import { Helmet } from "@/layouts/Helmet.layout";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -35,7 +36,9 @@ export default function Project() {
 
   return (
     <>
-      <Header title={data.title} image={data.image} />
+      <Helmet title={data.title} image={data.image}>
+        <Header title={data.title} image={data.image} />
+      </Helmet>
     </>
   );
 }
