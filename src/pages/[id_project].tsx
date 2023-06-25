@@ -1,3 +1,4 @@
+import { Header } from "@/components /projects/Header";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -32,5 +33,9 @@ export default function Project() {
 
   if (!data) return <>loading</>;
 
-  return <>a</>;
+  return (
+    <>
+      <Header title={data.title} image={data.image} />
+    </>
+  );
 }
