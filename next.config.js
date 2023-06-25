@@ -4,6 +4,14 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: [
+    {
+      protocol: "https",
+      hostname: "i.ibb.co",
+      port: "",
+      pathname: "/**",
+    },
+  ],
 };
 
 module.exports = nextConfig;
