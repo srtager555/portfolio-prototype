@@ -1,5 +1,6 @@
-import { HeaderContainer, Title } from "@/styles/projects/Header.styles";
+import { HeaderContainer, ImageContainer, Img, Title } from "@/styles/projects/Header.styles";
 import Image from "next/image";
+import { useEffect } from "react";
 
 interface props {
   image: string;
@@ -9,9 +10,14 @@ interface props {
 export function Header({ title, image }: props) {
   return (
     <HeaderContainer>
-      <div>
-        <Image src={image} alt={title} fill sizes="100%" />
-      </div>
+      <ImageContainer>
+        {/* the project eject a typeError: 
+          TypeError: Spread syntax requires ...iterable not be null or undefined  
+          idk why this happens
+        */}
+        {/* <Image /> */}
+        <Img src={image} alt={title} />
+      </ImageContainer>
       <Title>{title}</Title>
     </HeaderContainer>
   );
