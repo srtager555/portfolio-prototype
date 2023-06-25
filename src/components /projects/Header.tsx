@@ -1,13 +1,14 @@
-import { HeaderContainer, ImageContainer, Img, Title } from "@/styles/projects/Header.styles";
+import { Description, HeaderContainer, ImageContainer, Img, Title } from "@/styles/projects/Header.styles";
 import Image from "next/image";
 import { useEffect } from "react";
 
 interface props {
   image: string;
   title: string;
+  description: string;
 }
 
-export function Header({ title, image }: props) {
+export function Header({ title, image, description }: props) {
   return (
     <HeaderContainer>
       <ImageContainer>
@@ -19,6 +20,7 @@ export function Header({ title, image }: props) {
         <Img src={image} alt={title} />
       </ImageContainer>
       <Title>{title}</Title>
+      <Description>{description}</Description>
     </HeaderContainer>
   );
 }
