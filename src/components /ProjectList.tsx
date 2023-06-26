@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import {
   FlexContainer,
   ImageContainer,
@@ -7,7 +5,7 @@ import {
   ProjectName,
   TranslateContainer,
 } from "@/styles/home/projectList.styles";
-import { useEffect, useState } from "react";
+import { ImageDefault } from "@/styles/index.styles";
 
 interface props {
   CardData: CardData[];
@@ -21,7 +19,12 @@ export function ProjectList({ CardData, loaded }: props) {
         <ProjectCard href={project_url} key={`${index} - ${name}`}>
           <TranslateContainer loaded={loaded}>
             <ImageContainer>
-              <img src={project_face} alt={name} />
+              <ImageDefault
+                src={project_face.image}
+                blurDataURL={project_face.imageBlur}
+                placeholder="blur"
+                alt={name}
+              />
             </ImageContainer>
             <ProjectName>{name}</ProjectName>
           </TranslateContainer>
