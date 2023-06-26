@@ -4,3 +4,31 @@
   padding: 0;
   font-family: "Noto Sans";
 }
+
+body {
+  font-size: 16px;
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1630px) {
+  body {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1240px) {
+  body {
+    font-size: 18px;
+  }
+}
