@@ -1,3 +1,4 @@
+import { Galery } from "@/components /projects/Galery";
 import { Header } from "@/components /projects/Header";
 import { Helmet } from "@/layouts/Helmet.layout";
 import { Content } from "@/styles/projects/Content.styles";
@@ -40,6 +41,7 @@ export default function Project() {
       <Helmet title={data.title} image={data.image}>
         <Header title={data.title} image={data.image} description={data.desc} />
         <Content>{data.content}</Content>
+        <Galery images={data.galery} />
       </Helmet>
     </>
   );
