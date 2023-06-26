@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   width: 100%;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 `;
 
 export const ImageContainer = styled.div`
@@ -14,6 +14,7 @@ export const Img = styled.img`
 `;
 
 export const Title = styled.h1`
+  margin-bottom: 2rem;
   font-size: 10rem;
   font-family: "League Gothic";
   text-align: center;
@@ -28,5 +29,18 @@ export const Title = styled.h1`
 
   @media (max-width: 375px) {
     font-size: 2rem;
+  }
+`;
+
+export const Description = styled.p`
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 1.5rem;
+
+  @media (max-width: 514px) {
+    font-size: 1.3rem;
+    width: 90%;
   }
 `;
