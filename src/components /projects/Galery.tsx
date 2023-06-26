@@ -11,7 +11,7 @@ export function Galery({ galery }: props) {
         <ImageContainer key={`a-${index}`}>
           {/* the same error from the header as well was ejected here */}
           {/* <Image src={el} alt="" /> */}
-          <Img src={el.image} placeholder="blur" blurDataURL={el.blurImage} alt="" />
+          <Img src={el.image} placeholder="blur" blurDataURL={el.imageBlur} alt="" />
         </ImageContainer>
       ))}
     </>
