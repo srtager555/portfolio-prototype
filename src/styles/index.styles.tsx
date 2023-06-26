@@ -1,4 +1,9 @@
+import Image, { ImageProps } from "next/image";
 import styled from "styled-components";
+
+export const ImageDefault = (props: ImageProps) => (
+  <Image {...props} alt={props.alt} width="10" height="10" sizes="100vw" style={{ width: "100%", height: "auto" }} />
+);
 
 export const Container = styled.div`
   width: 100%;
