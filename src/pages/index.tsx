@@ -1,22 +1,8 @@
 import { BGTitleDesktop, BGTitleMobile, TextAnimation } from "@/styles/home/index.styles";
 import { useEffect, useState } from "react";
 import { ProjectList } from "@/components /ProjectList";
-import { GetStaticProps, NextPage } from "next";
+import { NextPage } from "next";
 import { Opacity } from "@/styles/index.styles";
-
-// gsp removed for a issue time
-// export const getStaticProps: GetStaticProps = async (ctx) => {
-//   // provitional api
-//   const projects: CardData[] = await fetch("http://localhost:3000/api/project_list", {
-//     // ...
-//   }).then((data) => data.json());
-
-//   return {
-//     props: {
-//       CardData: projects,
-//     },
-//   };
-// };
 
 const Home: NextPage = function () {
   const [firstPaint, setFirstPaint] = useState(true);
@@ -28,8 +14,12 @@ const Home: NextPage = function () {
       id: "failed",
       name: "failed",
       project_url: "/404",
-      project_face:
-        "https://i.ibb.co/K7KxrMp/snow-moon-ahri-skin-lol-splash-art-phone-wallpaper-hd-uhdpaper-com-593-1-k.jpg",
+      project_face: {
+        image:
+          "https://i.ibb.co/K7KxrMp/snow-moon-ahri-skin-lol-splash-art-phone-wallpaper-hd-uhdpaper-com-593-1-k.jpg",
+        imageBlur:
+          "https://i.ibb.co/K7KxrMp/snow-moon-ahri-skin-lol-splash-art-phone-wallpaper-hd-uhdpaper-com-593-1-k.jpg",
+      },
     },
   ]);
 
