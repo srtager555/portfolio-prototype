@@ -3,11 +3,9 @@ const wrapping_letters: ProjectData = {
   title: "Wrapping Letters",
   desc: "Make more with less in your text animation with Wrapping Letters",
   content: `
-    Wrapping Letters is a powerful package designed specifically for React, 
-    soon to be available in JavaScript as well. It aims to streamline working with letters, 
-    making it remarkably easy to wrap them within various JSX elements. With its simple syntax, 
-    Wrapping Letters not only enables you to create visually appealing text animations but also allows you to work with events effortlessly. 
-    You can execute any function related to a specific word without the hassle of searching for it in a lengthy paragraph. This package simplifies the process and enhances your ability to work with letters in a dynamic and engaging way.
+    Wrapping Letters simplifies letter manipulation in React, making it easy to wrap them in JSX elements.
+    Create visually appealing text animations and effortlessly work with events.
+    Say goodbye to searching in long paragraphs. This package enhances your ability to work dynamically and engage with letters.
   `,
   galery: [
     "https://i.ibb.co/SsX859q/portfolio-image.png",
