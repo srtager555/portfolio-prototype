@@ -38,10 +38,10 @@ export default function Project() {
 
   return (
     <>
-      <Helmet title={data.title} image={data.image}>
+      <Helmet title={data.title} image={data.image.image}>
         <Header title={data.title} image={data.image} description={data.desc} />
         <Content>{data.content}</Content>
-        <Galery images={data.galery} />
+        <Galery galery={data.galery} />
       </Helmet>
     </>
   );
