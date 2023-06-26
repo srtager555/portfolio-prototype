@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ImageDefault } from "../index.styles";
 
 export const HeaderContainer = styled.header`
   width: 100%;
@@ -9,7 +10,7 @@ export const ImageContainer = styled.div`
   width: 100%;
 `;
 
-export const Img = styled.img`
+export const Img = styled(ImageDefault)`
   width: 100%;
 `;
 
