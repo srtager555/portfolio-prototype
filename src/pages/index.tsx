@@ -1,6 +1,6 @@
 import { BGTitleDesktop, BGTitleMobile, TextAnimation } from "@/styles/home/index.styles";
 import { useEffect, useState } from "react";
-import { ProjectList } from "@/components /ProjectList";
+import { ProjectList } from "@/components/ProjectList";
 import { NextPage } from "next";
 import { Opacity } from "@/styles/index.styles";
 
