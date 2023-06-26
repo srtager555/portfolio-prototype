@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 interface props {
-  image: string;
+  image: img;
   title: string;
   description: string;
 }
@@ -17,7 +17,7 @@ export function Header({ title, image, description }: props) {
           idk why this happens
         */}
         {/* <Image /> */}
-        <Img src={image} alt={title} />
+        <Img src={image.image} blurDataURL={image.imageBlur} placeholder="blur" alt={title} />
       </ImageContainer>
       <Title>{title}</Title>
       <Description>{description}</Description>
