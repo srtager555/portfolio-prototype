@@ -6,13 +6,20 @@ export const Container = styled(Link)`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   text-decoration: none;
   margin-top: 200px;
-  margin-bottom: 100px;
+  padding: 7%;
   overflow: hidden;
   color: #000;
+
+  @media (max-width: 1350px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 1224px) {
+    padding: 4%;
+  }
 `;
 
 export const DataContainer = styled.div`
@@ -20,7 +27,7 @@ export const DataContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1024px) {
     padding-left: 10px;
   }
 `;
