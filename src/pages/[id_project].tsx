@@ -1,5 +1,6 @@
 import { Galery } from "@/components/projects/Galery";
 import { Header } from "@/components/projects/Header";
+import { NextProject } from "@/components/projects/NextProject";
 import { Helmet } from "@/layouts/Helmet.layout";
 import { Content } from "@/styles/projects/Content.styles";
 import { useRouter } from "next/router";
@@ -42,6 +43,7 @@ export default function Project() {
         <Header title={data.title} image={data.image} description={data.desc} />
         <Content>{data.content}</Content>
         <Galery galery={data.galery} />
+        <NextProject title={data.title} image={data.image} id="wrapping_letters" />
       </Helmet>
     </>
   );
