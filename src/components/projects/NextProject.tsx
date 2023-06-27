@@ -1,5 +1,5 @@
 import { ImageDefault } from "@/styles/index.styles";
-import { Container, Next } from "@/styles/projects/NextProject.styles";
+import { Container, DataContainer, Go, ImageContainer, Name, Next } from "@/styles/projects/NextProject.styles";
 import Link from "next/link";
 
 interface props {
@@ -17,8 +17,16 @@ export function NextProject({ image, title, id }: props) {
 
   return (
     <Container href={`/${id}`}>
-      <Next>NEXT - {title}</Next>
-      <ImageDefault src={a.image} alt={title} placeholder="blur" blurDataURL={a.imageBlur} />
+      <DataContainer>
+        <div>
+          <Name>{title}</Name>
+          <Next>Next project</Next>
+        </div>
+        <Go>Go</Go>
+      </DataContainer>
+      <ImageContainer>
+        <ImageDefault src={a.image} alt={title} placeholder="blur" blurDataURL={a.imageBlur} />
+      </ImageContainer>
     </Container>
   );
 }
