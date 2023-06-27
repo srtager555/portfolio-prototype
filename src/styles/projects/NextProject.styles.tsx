@@ -13,6 +13,10 @@ export const Container = styled(Link)`
   overflow: hidden;
   color: #000;
 
+  @media (min-height: 1500px) and (min-width: 1200px) {
+    max-height: 900px;
+  }
+
   @media (max-width: 1350px) {
     height: 100vh;
   }
@@ -23,6 +27,7 @@ export const Container = styled(Link)`
 `;
 
 export const DataContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,15 +40,47 @@ export const DataContainer = styled.div`
 export const Name = styled.h2`
   font-size: 10rem;
   font-family: "League Gothic";
+
+  @media (max-width: 500px) {
+    font-size: 7rem;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 5rem;
+  }
 `;
 
 export const Next = styled.p`
   font-size: 1.5rem;
   font-weight: 300;
+
+  @media (max-width: 450px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const ImageContainer = styled.div`
   width: 50%;
+
+  @media (max-width: 1024px) {
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    width: 60%;
+    z-index: -1;
+  }
+
+  @media (max-width: 500px) {
+    right: 0%;
+    top: 40%;
+    width: 60%;
+  }
+
+  @media (max-width: 500px) {
+    top: 36%;
+    right: -15%;
+    width: 65%;
+  }
 `;
 
 export const Go = styled.span`
@@ -56,4 +93,17 @@ export const Go = styled.span`
   border: solid 1px #000;
   font-size: 5rem;
   font-family: "League Gothic";
+  mix-blend-mode: difference;
+
+  @media (max-width: 500px) {
+    width: 150px;
+    height: 150px;
+    font-size: 3rem;
+  }
+
+  @media (max-width: 380px) {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+  }
 `;
