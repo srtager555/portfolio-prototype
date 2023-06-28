@@ -12,7 +12,7 @@ export function NextProject({ id }: props) {
 
   useEffect(() => {
     async function getNextProject() {
-      await fetch("/api/getNextProject").then(async (_) => {
+      await fetch("/api/getNextProject", { method: "POST", body: JSON.stringify({ id }) }).then(async (_) => {
         if (_.ok) {
           setData(await _.json());
         }
@@ -25,7 +25,7 @@ export function NextProject({ id }: props) {
   if (!data) return <></>;
 
   return (
-    <Container href={`/${data.project_url}`}>
+    <Container href={`${data.project_url}`}>
       <DataContainer>
         <div>
           <Name>{data.name}</Name>
