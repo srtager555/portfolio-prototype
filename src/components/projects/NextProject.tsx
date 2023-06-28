@@ -25,7 +25,7 @@ export function NextProject({ id }: props) {
   if (!data) return <></>;
 
   return (
-    <Container href={`/${id}`}>
+    <Container href={`/${data.project_url}`}>
       <DataContainer>
         <div>
           <Name>{data.name}</Name>
