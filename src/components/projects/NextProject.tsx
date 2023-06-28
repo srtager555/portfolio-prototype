@@ -20,6 +20,7 @@ export function NextProject({ id }: props) {
     }
 
     getNextProject();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!data) return <></>;
