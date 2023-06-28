@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.p`
-  width: 100%;
+  width: 90%;
   max-width: 1024px;
   margin: 0 auto;
   margin-bottom: 100px;
@@ -9,6 +9,7 @@ export const Content = styled.p`
   font-weight: 300;
 
   @media (max-width: 514px) {
-    width: 90%;
+    font-size: 1.5rem;
+    margin-bottom: 70px;
   }
 `;
