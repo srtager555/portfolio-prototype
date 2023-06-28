@@ -43,7 +43,7 @@ export default function Project() {
         <Header title={data.title} image={data.image} description={data.desc} />
         <Content>{data.content}</Content>
         <Galery galery={data.galery} />
-        <NextProject title={data.title} image={data.image} id="wrapping_letters" />
+        <NextProject id={id_project as unknown as string} />
       </Helmet>
     </>
   );
