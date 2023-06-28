@@ -1,31 +1,45 @@
 import { ImageDefault } from "@/styles/index.styles";
 import { Container, DataContainer, Go, ImageContainer, Name, Next } from "@/styles/projects/NextProject.styles";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 interface props {
-  image: img;
-  title: string;
   id: string;
 }
 
-export function NextProject({ image, title, id }: props) {
-  const a = {
-    image: "https://i.ibb.co/K7KxrMp/snow-moon-ahri-skin-lol-splash-art-phone-wallpaper-hd-uhdpaper-com-593-1-k.jpg",
-    imageBlur:
-      "https://i.ibb.co/K7KxrMp/snow-moon-ahri-skin-lol-splash-art-phone-wallpaper-hd-uhdpaper-com-593-1-k.jpg",
-  };
+export function NextProject({ id }: props) {
+  const [data, setData] = useState<CardData | undefined>();
+
+  useEffect(() => {
+    async function getNextProject() {
+      await fetch("/api/getNextProject").then(async (_) => {
+        if (_.ok) {
+          setData(await _.json());
+        }
+      });
+    }
+
+    getNextProject();
+  }, []);
+
+  if (!data) return <></>;
 
   return (
     <Container href={`/${id}`}>
       <DataContainer>
         <div>
-          <Name>{title}</Name>
+          <Name>{data.name}</Name>
           <Next>Next project</Next>
         </div>
         <Go>Go</Go>
       </DataContainer>
       <ImageContainer>
-        <ImageDefault src={a.image} alt={title} placeholder="blur" blurDataURL={a.imageBlur} />
+        <ImageDefault
+          src={data.project_face.image}
+          alt={data.name}
+          placeholder="blur"
+          blurDataURL={data.project_face.imageBlur}
+        />
       </ImageContainer>
     </Container>
   );
