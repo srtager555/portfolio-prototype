@@ -6,6 +6,7 @@ export const Container = styled(Link)`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
   text-decoration: none;
   margin-top: 200px;
@@ -15,10 +16,6 @@ export const Container = styled(Link)`
 
   @media (min-height: 1500px) and (min-width: 1200px) {
     max-height: 900px;
-  }
-
-  @media (max-width: 1350px) {
-    height: 100vh;
   }
 
   @media (max-width: 1224px) {
@@ -62,22 +59,16 @@ export const Next = styled.p`
 export const ImageContainer = styled.div`
   width: 50%;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1024px) and (min-height: 768px) {
     position: absolute;
-    right: 5%;
-    top: 30%;
+    right: 0%;
+    bottom: -10%;
     width: 60%;
     z-index: -1;
   }
 
-  @media (max-width: 500px) {
-    right: 0%;
-    top: 40%;
-    width: 60%;
-  }
-
-  @media (max-width: 500px) {
-    top: 36%;
+  @media (max-width: 800px) {
+    position: absolute;
     right: -15%;
     width: 65%;
   }
