@@ -29,7 +29,7 @@ export const Title = styled.h1`
   }
 
   @media (max-width: 375px) {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 `;
 
@@ -41,7 +41,7 @@ export const Description = styled.p`
   font-size: 1.5rem;
 
   @media (max-width: 514px) {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     width: 90%;
   }
 `;
