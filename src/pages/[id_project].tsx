@@ -15,6 +15,8 @@ export default function Project() {
     async function getProject() {
       if (!id_project) return;
 
+      setData(undefined);
+
       const project = await fetch("/api/getProject/", {
         method: "POST",
         body: JSON.stringify({
