@@ -59,7 +59,7 @@ export const Next = styled.p`
 export const ImageContainer = styled.div`
   width: 50%;
 
-  @media (max-width: 1024px) and (min-height: 768px) {
+  @media (max-width: 768px) and (min-height: 768px) {
     position: absolute;
     right: 0%;
     bottom: -10%;
@@ -69,6 +69,14 @@ export const ImageContainer = styled.div`
 
   @media (max-width: 800px) {
     position: absolute;
+    bottom: -15%;
+    right: -10%;
+    width: 65%;
+  }
+
+  @media (max-width: 500px) {
+    position: absolute;
+    bottom: -1%;
     right: -15%;
     width: 65%;
   }
