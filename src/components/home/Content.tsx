@@ -1,12 +1,15 @@
+import { Container, CorrectFSizeContainer, Description, Introduction } from "@/styles/home/index.new.styles";
 import WL from "wrapping-letters-react";
 
 export function Content() {
   return (
-    <div>
-      <h1>Hello!, I&apos;m Carlos && Ponce</h1>
-      <p>
-        <WL text="Front-end dev based in Honduras" />
-      </p>
-    </div>
+    <Container>
+      <CorrectFSizeContainer>
+        <Introduction>Hello, I&apos;m Carlos && Ponce!</Introduction>
+        <Description>
+          <WL text="Front-end dev based in Honduras" />
+        </Description>
+      </CorrectFSizeContainer>
+    </Container>
   );
 }
