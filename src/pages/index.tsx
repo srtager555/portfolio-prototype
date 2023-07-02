@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ProjectList } from "@/components/ProjectList";
 import { NextPage } from "next";
 import { Opacity } from "@/styles/index.styles";
+import { Content } from "@/components/home/Content";
 
 const Home: NextPage = function () {
   const [firstPaint, setFirstPaint] = useState(true);
@@ -61,7 +62,8 @@ const Home: NextPage = function () {
 
   return (
     <Opacity loaded={opacityLoaded}>
-      {!mobile ? (
+      <Content />
+      {/* {!mobile ? (
         <BGTitleDesktop loaded={loaded}>
           <span>CARLOS PONCE</span>
           <span>PORTFOLIO</span>
@@ -78,8 +80,8 @@ const Home: NextPage = function () {
             <span>Ponce</span>
           </TextAnimation>
         </BGTitleMobile>
-      )}
-      <ProjectList CardData={cardData} loaded={loaded} />
+      )} */}
+      {/* <ProjectList CardData={cardData} loaded={loaded} /> */}
     </Opacity>
   );
 };
