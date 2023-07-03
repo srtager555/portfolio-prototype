@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const CorrectFSizeContainer = styled.div`
-  font-size: 20rem;
+  font-size: 19rem;
 
   & h1,
   p,
@@ -28,13 +28,32 @@ export const Introduction = styled.h1`
 
 export const Description = styled.p`
   text-transform: uppercase;
-  line-height: 70%;
+  line-height: 80%;
 `;
+
+const Wrapp = styled.span`
+  overflow: hidden;
+`;
+const Letter = styled.span<{ loaded: boolean }>`
+  display: inline-block;
+  transform: translateY(${({ loaded }) => (loaded ? "100%" : "0%")});
+  transition: 1s ease-in-out;
+  white-space: break-spaces;
+`;
+
+export function DefaultWrapp({ children, loaded }: { children: children; loaded: boolean }) {
+  return (
+    <Wrapp>
+      <Letter loaded={loaded}>{children}</Letter>
+    </Wrapp>
+  );
+}
 
 export const CourgetteFont = styled.span`
   text-transform: none !important;
   font-family: "Courgette" !important;
   font-size: 11rem;
+  white-space: break-spaces;
 `;
 
 export function ScriptFont({ letter }: { letter: string }) {
