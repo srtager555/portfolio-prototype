@@ -5,6 +5,8 @@ export const Container = styled.div`
   height: 100vh;
   padding-top: 50px;
   overflow: hidden;
+  mix-blend-mode: difference;
+  color: #fff;
 `;
 
 export const CorrectFSizeContainer = styled.div`
@@ -19,6 +21,7 @@ export const CorrectFSizeContainer = styled.div`
 
 export const Introduction = styled.h1`
   font-size: 7rem;
+  margin-left: 9px;
 `;
 
 export const Description = styled.p`
