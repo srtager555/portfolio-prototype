@@ -7,7 +7,11 @@ import {
 } from "@/styles/home/index.new.styles";
 import WL from "wrapping-letters-react";
 
-export function Content() {
+interface props {
+  loaded: boolean;
+}
+
+export function Content({ loaded }: props) {
   return (
     <Container>
       <CorrectFSizeContainer>
