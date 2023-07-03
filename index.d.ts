@@ -19,3 +19,12 @@ type ProjectData = {
   content: string;
   galery: img[];
 };
+
+interface props {
+  letter?: string;
+  cssClass?: string;
+  specialWrapp?: { hasCustomWrapp: boolean; NewWrappStructure: Component<{ letter: string; cssClass: string }> };
+  index?: number;
+}
+
+type StructureProps = (props: props) => JSX.Element;
