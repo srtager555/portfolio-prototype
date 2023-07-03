@@ -52,3 +52,7 @@ export const Filter = styled.div`
 export const Opacity = styled.div<{ loaded: boolean }>`
   opacity: ${({ loaded }) => (loaded ? 1 : 0)};
 `;
+
+export const Ampersand = styled.span`
+  font-family: "Poppins" !important;
+`;
