@@ -15,13 +15,13 @@ export function Content({ loaded }: props) {
   return (
     <Container>
       <CorrectFSizeContainer>
-        <Introduction>Hello, I&apos;m Carlos && Ponce!</Introduction>
+        {/* <Introduction>Hello, I&apos;m Carlos Ponce!</Introduction> */}
         <Description>
           <WL
-            text="Front-end dev based in Honduras"
+            text="Front-end dev. living in Honduras"
             textOptions={{
               SpecialWrapp: {
-                wordToSearch: ["based", "in"],
+                wordToSearch: ["living", "in"],
                 structureToAdd: ScriptFont as unknown as JSX.Element,
               },
               PerWord: true,
