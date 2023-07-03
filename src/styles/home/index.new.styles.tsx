@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
-  padding-top: 50px;
   overflow: hidden;
   mix-blend-mode: difference;
   color: #fff;
@@ -25,11 +27,12 @@ export const Introduction = styled.h1`
 `;
 
 export const Description = styled.p`
+  text-transform: uppercase;
   line-height: 70%;
 `;
 
 export const CourgetteFont = styled.span`
-  /* line-height: 70%; */
+  text-transform: none !important;
   font-family: "Courgette" !important;
   font-size: 11rem;
 `;
