@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const CorrectFSizeContainer = styled.div`
-  font-size: 19rem;
+  font-size: 15rem;
 
   & h1,
   p,
@@ -39,6 +39,7 @@ const Letter = styled.span<{ loaded: boolean }>`
   transform: translateY(${({ loaded }) => (loaded ? "100%" : "0%")});
   transition: 1s ease-in-out;
   white-space: break-spaces;
+  letter-spacing: -7px;
 `;
 
 export function DefaultWrapp({ children, loaded }: { children: children; loaded: boolean }) {
@@ -52,7 +53,7 @@ export function DefaultWrapp({ children, loaded }: { children: children; loaded:
 export const CourgetteFont = styled.span`
   text-transform: none !important;
   font-family: "Courgette" !important;
-  font-size: 11rem;
+  font-size: 6rem;
   white-space: break-spaces;
 `;
 
