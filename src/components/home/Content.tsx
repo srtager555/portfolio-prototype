@@ -54,7 +54,7 @@ export function Content({ loaded }: props) {
         {/* <Introduction>Hello, I&apos;m Carlos Ponce!</Introduction> */}
         <Description>
           <WL
-            text="Front-end dev. living in Honduras"
+            text="Frontend dev. living in Honduras"
             textOptions={{
               SpecialWrapp: {
                 wordToSearch: ["living", "in"],
