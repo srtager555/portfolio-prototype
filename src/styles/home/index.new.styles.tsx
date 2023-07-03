@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const CorrectFSizeContainer = styled.div`
-  font-size: 15rem;
+  font-size: 17rem;
 
   & h1,
   p,
