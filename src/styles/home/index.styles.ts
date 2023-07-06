@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const BGTitleDesktop = styled.div<{ loaded: boolean }>`
   position: fixed;
-  top: ${({ loaded }) => (loaded ? "25%" : "50%")};
+  top: ${({ loaded }) => (loaded ? "25%" : "25%")};
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  font-size: 25rem;
+  font-size: 20rem;
   white-space: nowrap;
   text-transform: uppercase;
   font-weight: 700;
