@@ -16,19 +16,21 @@ export function ProjectList({ CardData, loaded }: props) {
   return (
     <FlexContainer>
       {CardData.map(({ project_face, project_url, name }, index) => (
-        <ProjectCard href={project_url} key={`${index} - ${name}`}>
-          <TranslateContainer loaded={loaded}>
-            <ImageContainer>
-              <ImageDefault
-                src={project_face.image}
-                blurDataURL={project_face.imageBlur}
-                placeholder="blur"
-                alt={name}
-              />
-            </ImageContainer>
+        <>
+          <ProjectCard href={project_url} key={`${index} - ${name}`}>
+            <TranslateContainer loaded={loaded}>
+              <ImageContainer>
+                <ImageDefault
+                  src={project_face.image}
+                  blurDataURL={project_face.imageBlur}
+                  placeholder="blur"
+                  alt={name}
+                />
+              </ImageContainer>
+            </TranslateContainer>
             <ProjectName>{name}</ProjectName>
-          </TranslateContainer>
-        </ProjectCard>
+          </ProjectCard>
+        </>
       ))}
     </FlexContainer>
   );

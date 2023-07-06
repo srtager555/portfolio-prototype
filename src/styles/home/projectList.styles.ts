@@ -49,6 +49,11 @@ export const ProjectCard = styled(Link)`
 
   &:active {
     transform: scale(0.9);
+
+    & p {
+      opacity: 0;
+      transition: opacity 0ms;
+    }
   }
 
   @media (max-width: 1280px) {
