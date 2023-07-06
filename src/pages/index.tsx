@@ -1,9 +1,8 @@
-import { BGTitleDesktop, BGTitleMobile, TextAnimation } from "@/styles/home/index.styles";
 import { useEffect, useState } from "react";
 import { ProjectList } from "@/components/ProjectList";
 import { NextPage } from "next";
 import { Opacity } from "@/styles/index.styles";
-import { Content } from "@/components/home/Content";
+import { Container, Content, Footer, Name, Portfolio, Rol } from "@/styles/home/index.newNew.styles";
 
 const Home: NextPage = function () {
   const [firstPaint, setFirstPaint] = useState(true);
@@ -62,26 +61,16 @@ const Home: NextPage = function () {
 
   return (
     <Opacity loaded={opacityLoaded}>
-      <Content />
-      {/* {!mobile ? (
-        <BGTitleDesktop loaded={loaded}>
-          <span>CARLOS PONCE</span>
-          <span>PORTFOLIO</span>
-        </BGTitleDesktop>
-      ) : (
-        <BGTitleMobile>
-          <TextAnimation loaded={loaded} reverse absolute>
-            <span>Portfolio</span>
-          </TextAnimation>
-          <TextAnimation loaded={loaded}>
-            <span>Carlos</span>
-          </TextAnimation>
-          <TextAnimation loaded={loaded}>
-            <span>Ponce</span>
-          </TextAnimation>
-        </BGTitleMobile>
-      )} */}
-      {/* <ProjectList CardData={cardData} loaded={loaded} /> */}
+      <Container>
+        <Content>
+          <Name>Carlos Ponce</Name>
+          <Rol>Front-end dev.</Rol>
+        </Content>
+        <Footer>
+          <Portfolio>Portfolio 23/24</Portfolio>
+        </Footer>
+        <ProjectList CardData={cardData} loaded={loaded} />
+      </Container>
     </Opacity>
   );
 };
