@@ -9,6 +9,10 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   padding: 3%;
+
+  @media (max-width: 900px) {
+    justify-content: flex-end;
+  }
 `;
 
 export const Content = styled.div`
@@ -19,6 +23,11 @@ export const Content = styled.div`
   color: #fff;
   mix-blend-mode: difference;
   z-index: -1;
+
+  @media (max-width: 900px) {
+    top: 0%;
+    transform: translateY(0%);
+  }
 `;
 
 export const Name = styled.h1`
@@ -27,6 +36,10 @@ export const Name = styled.h1`
   text-transform: uppercase;
   letter-spacing: -5px;
   line-height: 90%;
+
+  @media (max-width: 414px) {
+    font-size: 7.1rem;
+  }
 `;
 
 export const Rol = styled.h1`
@@ -34,6 +47,10 @@ export const Rol = styled.h1`
   font-size: 5rem;
   text-transform: uppercase;
   letter-spacing: -3px;
+
+  @media (max-width: 414px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Footer = styled.div`
@@ -44,9 +61,18 @@ export const Footer = styled.div`
   mix-blend-mode: difference;
   z-index: -1;
   text-align: end;
+
+  @media (max-width: 900px) {
+    top: 0%;
+    bottom: auto;
+  }
 `;
 
 export const Portfolio = styled.p`
   font-family: "League Gothic";
   font-size: 5rem;
+
+  @media (max-width: 900px) {
+    font-size: 2rem;
+  }
 `;
