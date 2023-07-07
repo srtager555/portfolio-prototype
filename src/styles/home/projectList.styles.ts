@@ -13,10 +13,12 @@ export const FlexContainer = styled.div`
   max-width: 1420px;
 
   @media (max-width: 900px) {
-    width: 80%;
+    justify-content: flex-start;
+    /* width: 80%;
+    margin: 0 auto; */
     padding: 0;
     border-radius: 10px;
-    overflow: scroll;
+    /* overflow: scroll; */
   }
 `;
 
@@ -47,15 +49,6 @@ export const ProjectCard = styled(Link)`
     }
   }
 
-  /* &:active {
-    transform: scale(0.9);
-
-    & p {
-      opacity: 0;
-      transition: opacity 0ms;
-    }
-  } */
-
   @media (max-width: 1280px) {
     max-width: 275px;
   }
@@ -65,15 +58,17 @@ export const ProjectCard = styled(Link)`
   }
 
   @media (max-width: 900px) {
-    margin-right: 70px;
+    margin-right: 10px;
 
     &:hover {
       filter: none;
+      width: auto;
     }
   }
 
   @media (max-width: 414px) {
-    min-width: 200px;
+    min-width: auto;
+    width: auto;
   }
 `;
 
@@ -89,8 +84,13 @@ export const TranslateContainer = styled.div<{ loaded: boolean }>`
 export const ImageContainer = styled.div`
   margin-bottom: -5px;
   width: 300px;
+
   & img {
     width: 100%;
+  }
+
+  @media (max-width: 414px) {
+    width: 150px;
   }
 `;
 
@@ -108,6 +108,7 @@ export const ProjectName = styled.p`
   pointer-events: none;
 
   @media (max-width: 414px) {
+    display: none;
     font-size: 1.2rem;
   }
 `;
