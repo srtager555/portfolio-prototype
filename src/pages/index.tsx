@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProjectList } from "@/components/ProjectList";
 import { NextPage } from "next";
 import { Opacity } from "@/styles/index.styles";
 import { Container, Content, Footer, Name, Portfolio, Rol } from "@/styles/home/index.newNew.styles";
+import { Context } from "@/layouts/Main.layout";
 
 const Home: NextPage = function () {
+  const context = useContext(Context);
   const [firstPaint, setFirstPaint] = useState(true);
   const [opacityLoaded, setOpacityLoaded] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -41,6 +43,7 @@ const Home: NextPage = function () {
 
           setFirstPaint(false);
           setOpacityLoaded(true);
+          context?.setLoaded(true);
 
           setTimeout(() => setLoaded(true), 1000);
         }, 1000);
