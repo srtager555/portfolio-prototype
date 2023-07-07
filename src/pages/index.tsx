@@ -67,7 +67,7 @@ const Home: NextPage = function () {
           <Rol>Front-end dev.</Rol>
         </Content>
         <Footer>
-          <Portfolio>Portfolio 23/24</Portfolio>
+          <Portfolio>23/24</Portfolio>
         </Footer>
         <ProjectList CardData={cardData} loaded={loaded} />
       </Container>
