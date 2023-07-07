@@ -56,3 +56,19 @@ export const Opacity = styled.div<{ loaded: boolean }>`
 export const Ampersand = styled.span`
   font-family: "Poppins" !important;
 `;
+
+// loader styles
+export const LoaderC = styled.div<{ loaded: boolean }>`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Poppins";
+  font-size: 45rem;
+  color: #0003;
+  opacity: ${({ loaded }) => (loaded ? `0` : `1`)};
+  mix-blend-mode: difference;
+  transition: 200ms ease-in-out;
+  pointer-events: none;
+  z-index: 99999999;
+`;
