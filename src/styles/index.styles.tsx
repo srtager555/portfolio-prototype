@@ -65,7 +65,7 @@ export const LoaderC = styled.div<{ loaded: boolean }>`
   transform: translate(-50%, -50%);
   font-family: "Poppins";
   font-size: 45rem;
-  color: #0003;
+  color: #fff;
   opacity: ${({ loaded }) => (loaded ? `0` : `1`)};
   mix-blend-mode: difference;
   transition: 200ms ease-in-out;
