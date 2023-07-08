@@ -2,10 +2,6 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export const FlexContainer = styled.div`
-  /* position: fixed;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,11 +10,8 @@ export const FlexContainer = styled.div`
 
   @media (max-width: 900px) {
     justify-content: flex-start;
-    /* width: 80%;
-    margin: 0 auto; */
     padding: 0;
     border-radius: 10px;
-    /* overflow: scroll; */
   }
 `;
 
@@ -26,10 +19,8 @@ export const ProjectCard = styled(Link)`
   display: flex;
   justify-content: center;
   width: 70px;
-  /* min-width: 225px; */
   max-width: 300px;
   margin: 0 10px;
-  /* border-radius: 10px; */
   overflow: hidden;
   transition: 200ms ease;
   color: #000;
@@ -73,11 +64,6 @@ export const ProjectCard = styled(Link)`
 `;
 
 export const TranslateContainer = styled.div<{ loaded: boolean }>`
-  transform: ${
-    {
-      /* ({ loaded }) => (loaded ? "translateY(0%)" : "translateY(100%)") */
-    }
-  };
   transition: ${({ loaded }) => (loaded ? "700ms ease-in-out" : "")};
 `;
 
