@@ -33,7 +33,8 @@ export const ProjectCard = styled(Link)`
 
   &:hover {
     width: 300px;
-    filter: drop-shadow(0px 0px 15px #0005);
+    box-shadow: 0px 0px 25px #0005;
+    /* filter: drop-shadow(0px 0px 15px #0005); */
 
     & p {
       opacity: 1;
