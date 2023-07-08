@@ -7,11 +7,12 @@ export const ImageContainer = styled.div<{ inView?: boolean }>`
   overflow: hidden;
 
   & img {
-    transform: translateY(${({ inView }) => (inView ? "0%" : "100%")});
+    opacity: ${({ inView }) => (inView ? "1" : "0")};
+    transform: translateY(${({ inView }) => (inView ? "0%" : "10%")});
   }
 `;
 
 export const Img = styled(ImageDefault)`
   width: 100%;
-  transition: transform 1.5s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 1.5s ease-in-out;
 `;
